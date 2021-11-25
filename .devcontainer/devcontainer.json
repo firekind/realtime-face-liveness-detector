@@ -1,0 +1,15 @@
+{
+    "name": "face-liveness-detector",
+    "dockerFile": "../Dockerfile",
+    "runArgs": [
+        "--gpus=all",
+        "-v=/tmp/.X11-unix:/tmp/.X11-unix",
+        "-e=DISPLAY=${env:DISPLAY}",
+        "--privileged",
+        "--net=host",
+        "-v=/dev:/dev"
+	],
+	"extensions": [
+		"ms-python.python"
+	],
+}
